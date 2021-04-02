@@ -7,6 +7,7 @@ import ArrowRightIcon from '@material-ui/icons/ArrowRight';
 export default ({title, items}) => {
     const [scrollX, setScrollX] = useState(0)
 
+/* Função matemática para mover as listas para a esquerda */
     const moverSetaEsquerda = () => {
         let x = scrollX + Math.round(window.innerWidth / 2);
         if(x > 0) {
@@ -15,6 +16,7 @@ export default ({title, items}) => {
         setScrollX(x);
     }
 
+/* Função matemática para mover as listas para a direita */
     const moverSetaDireita = () => {
         let x = scrollX - Math.round(window.innerWidth / 2);
         let largLista = items.results.length * 150;
@@ -25,6 +27,7 @@ export default ({title, items}) => {
     }
 
     return (
+        /* Disposição das listas dos filmes e das setas de movimento */
         <div className="linhasDeFilme">
 
             <h2>{title}</h2>

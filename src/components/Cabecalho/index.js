@@ -2,6 +2,7 @@ import React from 'react';
 import './Cabecalho.css';
 // eslint-disable-next-line
 export default ({fundo}) => {
+    /* Inserção dos ícones do logo e do usuário na parte superior da página, cabeçalho (header) */
     return (
         <header className={fundo ? 'fundo' : ''}>
             <div className="cabecalho--logo">

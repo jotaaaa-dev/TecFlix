@@ -83,12 +83,13 @@ export default {
         if(movieId) {
             switch(type){
                 case 'movie':
-                    info = await concUrl(`/movie/${movieId}?language=pt-BR&api_key=${API_KEY}`);
+                    info = await concUrl(`/movie/${movieId}?language=pt-BR&api_key=${API_KEY}`); // Decisão a tomar em caso de filmes
                 break;
                  case 'tv':
-                    info = await concUrl(`/tv/${movieId}?language=pt-BR&api_key=${API_KEY}`);
+                    info = await concUrl(`/tv/${movieId}?language=pt-BR&api_key=${API_KEY}`);   // Decisão a tomar em caso de séries
                 break;
-                default:
+                default:        /* Neste projeto não existe uso para a função default, pois na escolha do filme DESTAQUE, não existe 
+                                a possibilidade de ele escolher alguma coisa que não seja nem um filme e nem uma série*/
                     info = null;
                 break;
             }

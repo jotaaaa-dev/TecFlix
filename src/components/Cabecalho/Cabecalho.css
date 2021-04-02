@@ -1,4 +1,5 @@
 header {
+/* Definição do cabeçalho */
     position: fixed;
     z-index: 999;
     top: 0;
@@ -12,23 +13,23 @@ header {
     background: transparent;
     transition: all ease 0.3s;
 }
-
+/* Definição do fundo do cabeçalho */
 header.fundo {
     background-color: #141414;
 }
-
+/* Definição do espaço disponível para a logo do cabeçalho */
 .cabecalho--logo {
     height:  50px;
 }
-
+/* Definição de quanto a imagem do logo do cabeçalho vai usar do espaço disponível */
 .cabecalho--logo img {
     height: 100%;
 }
-
+/* Definição do espaço disponível para a logo do usuário no cabeçalho */
 .cabecalho--usuario {
     height: 40px;
 }
-
+/* Definição de quanto a imagem do usuário do cabeçalho vai usar do espaço disponível */
 .cabecalho--usuario img {
     height: 100%;
     border-radius: 3px;
