@@ -1,4 +1,4 @@
-const API_KEY = '98c875ad5889ce9a2f8a2a0c6ab23963'
+const API_KEY = process.env.REACT_APP_APIKEY
 const API_BASE = 'https://api.themoviedb.org/3';
 
 /*
@@ -18,6 +18,7 @@ Títulos na página inicial do programa
     const concUrl = async (endpoint) => {
     const req = await fetch(`${API_BASE}${endpoint}`);
     const json = await req.json();
+    console.log(json)
     return json;
 }
 

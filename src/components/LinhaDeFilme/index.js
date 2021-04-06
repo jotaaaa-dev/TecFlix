@@ -1,5 +1,6 @@
 import React, { useState }from 'react';
 import './Linhadefilme.css';
+import erro from '../../images/erro.jpg'
 import ArrowLeftIcon from '@material-ui/icons/ArrowLeft';
 import ArrowRightIcon from '@material-ui/icons/ArrowRight';
 
@@ -50,7 +51,10 @@ export default ({title, items}) => {
 
                            {/* Comando para mostrar a capa do filme, a capa se encontra no "poster_path", porém ele não vem com a URL completa por ser dinamica,
                             com isso foi montado a url pra obter essas imagens complementado pelo conteudo da "poster_path" */}
-                           <img src={`https://image.tmdb.org/t/p/w300${item.poster_path}`} alt={items.original_title}/>
+                            {item.poster_path 
+                           ? <img src={`https://image.tmdb.org/t/p/w300${item.poster_path}`} title={item.title} alt={items.original_title}/>
+                           : <img src={erro} title ={'Imagem não disponível'} alt={'Imagem não disponível'}/>
+                            }
                        </div>
                     ))}                     
                 </div>                   
